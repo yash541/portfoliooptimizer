@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.container > .row {
+  margin-bottom: 20px;
+}
+.risktable {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+.risktitle {
+  margin-bottom: 0 !important;
+  text-align: center;
+  font-weight: bold;
+}
+.input-group {
+  width: 75%;
+}
+.key_name {
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body {
+  background: linear-gradient(90deg,#a4b5b9, #0dcaf0);
+}
+.headingdiv{
+  color: black;
+}
+.table{
+  border-color: #212529!important;
+}
+.stock-form{
+  width: 80%;
+}
+.chartname{
+  text-align: center;
+}
+#allgraph{
+  width:100%
+}

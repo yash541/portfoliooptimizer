@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+        integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+
+  <body>
+    <div class="container">
+      <h1 class="row headingdiv"><B>PORTFOLIO OPTIMIZER</B></h1>
+      <form class="stock-form">
+        <div class="form-group row"  id="inputForm">
+          <div class="col-sm-10">
+            <input id="stock" type="text" class="form-control" placeholder="input stock tickers seperated by space" aria-label="input your stock tickers" aria-describedby="submit">
+            <small id="errorHelp" class="text-danger">
+            </small>   
+          </div>
+          <div class="col-sm-2">
+            <button id="submit" class="btn btn-outline-success" type="button"><B>SUBMIT</B></button>
+          </div>
+        </div>
+      </form>
+      <span id="error" class="row"></span>
+      <div class="row" id="loading" style="display: none">LOADING</div>
+      <div class="row">
+        <div id="min-risk" class="col"></div>
+        <div id="max-return" class="col"></div>
+      </div>
+      <div id="allgraph">
+      </div>
+      <div class="row">
+        <div class="col-sm-6" id="leftchart" style="max-height: 450px">
+          <canvas id="mypie" style="max-height: 800px; max-width: 800px"></canvas>
+          <p id="leftchartname" class="chartname"></p> 
+        </div>
+        <div class="col-sm-6" id="rightchart" style="max-height: 450px">
+          <canvas id="mypiem" style="max-height:800px; max-width: 800px"></canvas>
+          <p id="rightchartname" class="chartname"></p> 
+        </div>
+      </div>
+    </div>
+    <script  src="{{ url_for('static', filename='index.js')}}" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='index.css')}}">
+
+  </body>
+</html>
